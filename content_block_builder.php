@@ -482,6 +482,25 @@
                 </div>
             </div>
         </div>
+        
+    <?php elseif( get_row_layout() == 'ticker' ): ?>
+        <!-- ** Tiles ** -->
+
+        <div class="ticker-section">
+                <div class="ticker-heading"><?php if(get_sub_field('ticker_title')) : ?><h2><?php the_sub_field('ticker_title') ?></h2><?php endif; ?></div>
+                
+                <div class="ticker">
+                    
+                    <?php
+                    if( have_rows('ticker_items') ):
+                        while ( have_rows('ticker_items') ) : the_row();
+                        ?>
+                        <article class="ticker-item">
+                            <div class="title"><?php the_sub_field('title'); ?></div><div class="info"> - &nbsp;<?php the_sub_field('info'); ?></div>
+                        </article>
+                        <?php endwhile; endif; ?>
+                    </div>
+                </div>
 
 
 

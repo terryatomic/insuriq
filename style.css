@@ -1438,6 +1438,7 @@ a {
 	margin-bottom: .5rem;
 }
 
+/* Cards */
 .cards-section {
 	padding-top: 80px;
 	padding-bottom: 80px;
@@ -1503,8 +1504,110 @@ a {
 	/* transition: .3s ease; */
 }
 
-.cards-main .card-cta:hover { 
+.cards-main .card-cta:hover {
 	background: none;
 	color: white;
+}
 
+.ticker-section {
+	background-color: #777;
+	height: 40px;
+	color: white;
+	width: 100%;
+	position: relative;
+}
+
+@-webkit-keyframes ticker {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		visibility: visible;
+	}
+
+	100% {
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+@keyframes ticker {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		visibility: visible;
+	}
+
+	100% {
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+.ticker {
+	display: inline-flex;
+	height: 40px;
+	line-height: 4rem;
+	white-space: nowrap;
+	/* padding-right: 100%; */
+	box-sizing: content-box;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-name: ticker;
+	animation-name: ticker;
+	-webkit-animation-duration: 50s;
+	animation-duration: 50s;
+	position: absolute;
+	left: auto;
+	top: 0;
+}
+
+.ticker-heading {
+	position: absolute;
+	background-color: #777;
+	display: flex;
+	align-items: center;
+	left: 0;
+	top: 0;
+	height: 40px;
+	padding: 0 40px;
+	z-index: 2;
+	color: white;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.ticker-heading h2 {
+	color: #84BA3D;
+	font-weight: 600;
+	font-style: italic;
+	margin: 0;
+	line-height: 1;
+	text-transform: capitalize;
+}
+
+.ticker-item {
+	display: inline-flex;
+	align-items: center;
+	padding: 0 30px;
+	font-size: 18px;
+	color: white;
+	line-height: 1;
+}
+
+.ticker-item div {
+	line-height: 1;
+	font-size: 18px;
+}
+
+.ticker-item div.title {
+	font-weight: 600;
+	margin-right: 10px;
+}
+
+.ticker-item div.info {
+	font-style: italic;
+	font-style: 300;
 }

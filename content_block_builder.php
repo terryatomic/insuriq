@@ -401,12 +401,9 @@
 </div>
 
 
-<!-- Tiles -->
 <?php elseif( get_row_layout() == 'tiles' ): ?>
-    
-    <!-- /** HOME PAGE ICONS **/ -->
-    
-    
+    <!-- ** Tiles ** -->
+
     <div class="tiles-section">
         <div class="page_width_small">
             <?php if(get_sub_field('tiles_title')) : ?><h2><?php the_sub_field('tiles_title') ?></h2><?php endif; ?>
@@ -439,6 +436,52 @@
         
     </div>
 </div>
+
+<?php elseif( get_row_layout() == 'cards' ): ?>
+    <!-- ** Tiles ** -->
+
+    <div class="cards-section">
+        <div class="page_width_small">
+            <?php if(get_sub_field('tiles_title')) : ?><h2><?php the_sub_field('tiles_title') ?></h2><?php endif; ?>
+            
+            <div class="cards-main">
+                
+                <?php
+                if( have_rows('card') ):
+                    while ( have_rows('card') ) : the_row();
+                    ?>
+                    
+                    <?php 
+                    $image = get_sub_field('image');
+                    $size = 'large'; // (thumbnail, medium, large, full or custom size)
+                    $image_url = wp_get_attachment_image_src($image, $size);
+                    ?>
+                    
+                    <?php 
+                    $cta_btn = get_sub_field('cta');
+                
+                    if( $cta_btn ):  
+                        $cta_btn_title = $cta_btn['title'];
+                        $cta_link = $cta_btn['url'];
+                    endif;
+                    
+                     ?>
+                    <?php if( $cta_btn ): ?>
+                    <a href="<?php echo esc_url( $cta_link ); ?>" class="card">
+                        <div class="card-image"><img src="<?php echo $image_url[0]; ?>" /></div>
+                        <div class="card-content">
+                            <h3 class="card-title"><?php the_sub_field('title'); ?></h3>
+                            <p class="card-text">
+                                <?php the_sub_field('text'); ?>
+                            </p>
+                            <div class="card-cta"><?php echo esc_html( $cta_btn_title ); ?></div>
+                        </div>
+                    </a>
+                    <?php endif; ?>
+                    <?php endwhile; endif; ?>
+                </div>
+            </div>
+        </div>
 
 
 

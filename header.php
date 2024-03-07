@@ -160,7 +160,7 @@ jQuery(document).ready(function() {
 			$(this).children('ul').stop(true, false, true).fadeToggle(200);
 		});
 
-		$('#menu-item-65 > a').append( " <i class='fal fa-angle-down'>" );
+		$('#menu-item-65 > a').append( " <i class='fa-solid fa-caret-down'>" );
 		$("#menu-item-65 > ul").append( "<div class='sub_menu_arrow1'></div>" );
 		$('#menu-item-65 > ul').hide();
 
@@ -170,7 +170,7 @@ jQuery(document).ready(function() {
 			$(this).children('ul').stop(true, false, true).fadeToggle(200);
 		});
 
-		$('#menu-item-66 > a').append( " <i class='fal fa-angle-down'>" );
+		$('#menu-item-66 > a').append( " <i class='fa-solid fa-caret-down'>" );
 		$("#menu-item-66 > ul").append( "<div class='sub_menu_arrow1'></div>" );
 		$('#menu-item-66 > ul').hide();
 

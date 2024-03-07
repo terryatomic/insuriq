@@ -2,15 +2,18 @@
 		
 		.footer1 {
 			position: relative;
-			background: #202020;
+			background: #1e4b88;
 			margin-top: 200px;
 			}
 		
 		.footer2 {
 			position: relative;
-			background: #000000;
+			background: #00ADE5;
 			padding: 50px 0;
 			}
+            .footer2 a {
+                color: white;
+            }
 
 			.footer_contact {
 				display: flex;
@@ -29,21 +32,25 @@
 					.footer_contact_item h5 {
 						margin: 0px;
 						padding: 0px;
-						font-size: 10pt;
-						font-weight: 300;
+						font-size: 18px;
+						font-weight: 600;
 						letter-spacing: 2px;
 						margin-bottom: 6px;
-						}
+					}
+                    
+                    .footer_contact_item .far {
+                        font-size: 18px;
+                    }
 		
 		.footer3 {
 			position: relative;
-			background: #202020;
-			color: #ffffff;
+			background: white;
+			color: #777;
 			padding: 15px 0;
 			text-align: center;
 			}
 		
-			.footer3 a { color:#ffffff; text-decoration: none; }
+			.footer3 a { color:#777; text-decoration: none; }
 
 			@media only screen and (max-width: 750px) {
 

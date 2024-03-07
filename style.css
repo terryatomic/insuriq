@@ -134,6 +134,7 @@ nav {
 	position: relative;
 	margin-left: 3px;
 	transition: all 0.4s ease;
+	color: #84BA3D;
 }
 
 .nav_menu ul li:hover i {
@@ -1379,10 +1380,10 @@ a {
 
 .tiles-section h2 {
 	font-weight: normal;
-	font-size: 36px;
-	border-bottom: 1px solid gray;
-	margin-bottom: 50px;
-	padding-bottom: 20px;
+	font-size: 34px;
+	border-bottom: 1px solid #AAA;
+	margin-bottom: 45px;
+	padding-bottom: 30px;
 	background-image: linear-gradient(to right, #1e4b88, #84BA3D);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1392,12 +1393,11 @@ a {
 .tiles {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	/* 4 columns with equal width */
 	gap: 30px;
 }
 
 .tiles .tile {
-	/* border: 3px solid #84BA3D; /* green */ 
+	/* border: 3px solid #84BA3D; /* green */
 	box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.5);
 	border-radius: 10px;
 	padding: 2rem;
@@ -1436,4 +1436,75 @@ a {
 	max-width: 100px;
 	height: auto;
 	margin-bottom: .5rem;
+}
+
+.cards-section {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-color: #00ADE5;
+	margin: 100px 0 80px 0;
+}
+
+.cards-main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	/* 2 columns with equal width */
+	gap: 50px;
+}
+
+.cards-main .card {
+	background-color: #777;
+	background: linear-gradient(125deg, #777, #555) !important;
+	color: white;
+	position: relative;
+}
+
+.cards-main .card-image {
+	height: 320px;
+	width: 100%;
+	object-fit: cover;
+	overflow: hidden;
+}
+
+.cards-main .card-image img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.cards-main .card-title {
+	font-size: 30px;
+	font-weight: 600;
+	/* text-align: center; */
+	color: white;
+}
+
+.cards-main .card-content {
+	padding: 50px 40px;
+	text-align: left;
+}
+
+.cards-main .card-content p {
+	margin-bottom: 0;
+	padding-bottom: 5px;
+	line-height: 1.4;
+	text-align: left;
+}
+
+.cards-main .card-cta {
+	border-radius: 5px;
+	background: linear-gradient(125deg, #ffffff, #eeeeee);
+	border: 1px solid white;
+	box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+	color: #777;
+	display: inline-block;
+	margin: 25px 0 0 0;
+	padding: 5px 10px;
+	/* transition: .3s ease; */
+}
+
+.cards-main .card-cta:hover { 
+	background: none;
+	color: white;
+
 }

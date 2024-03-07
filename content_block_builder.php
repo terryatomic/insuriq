@@ -402,13 +402,14 @@
 
 
 <!-- Tiles -->
-<?php if( get_row_layout() == 'tiles' ): ?>
+<?php elseif( get_row_layout() == 'tiles' ): ?>
     
     <!-- /** HOME PAGE ICONS **/ -->
     
     
     <div class="tiles-section">
         <div class="page_width_small">
+            <?php if(get_sub_field('tiles_title')) : ?><h2><?php the_sub_field('tiles_title') ?></h2><?php endif; ?>
             
             <div class="tiles">
                 
@@ -423,9 +424,9 @@
                     $image_url = wp_get_attachment_image_src($image, $size);
                     ?>
                     
-                    <div class="tile_icon">
-                        <div class="tile_icon_image"><img src="<?php echo $image_url[0]; ?>" /></div>
-                        <div class="tile_icon_text"><?php the_sub_field('title'); ?></div>
+                    <div class="tile">
+                        <div class="tile-image"><img src="<?php echo $image_url[0]; ?>" /></div>
+                        <h3 class="tile-text"><?php the_sub_field('title'); ?></h3>
                     </div>
                     
                     

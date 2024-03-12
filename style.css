@@ -343,7 +343,7 @@ nav {
 }
 
 .hero_container {
-	background-color: #075494;
+	background-color: #1F4B88;
 	position: relative;
 	width: 100%;
 	min-height: 200px;
@@ -354,10 +354,19 @@ nav {
 	background-position: right center;
 }
 
+
+/* .hero_overlay {
+	height: 100%;
+	background-image: url('images/hero-img.jpg')!important;
+	background-position: right!important;
+	background-size: 85% 100%;
+	background-repeat: no-repeat;
+} */
+
 .hero_overlay {
 	height: 100%;
-	background-image: url('images/hero-img.jpg');
-	background-position: right;
+	background-image: url('images/hero-angle-overlay.svg')!important;
+	background-position: left!important;
 	background-size: 85% 100%;
 	background-repeat: no-repeat;
 }

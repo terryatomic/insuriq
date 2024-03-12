@@ -422,8 +422,13 @@
                     ?>
                     
                     <div class="tile">
-                        <div class="tile-image"><img src="<?php echo $image_url[0]; ?>" /></div>
-                        <h3 class="tile-text"><?php the_sub_field('title'); ?></h3>
+                        <div class="tile-front">
+                            <div class="tile-image"><img src="<?php echo $image_url[0]; ?>" /></div>
+                            <h3 class="tile-text"><?php the_sub_field('title'); ?></h3>
+                        </div>
+                        <div class="tile-reveal">
+                            <p><?php the_sub_field('content'); ?></p>
+                        </div>
                     </div>
                     
                     

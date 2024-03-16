@@ -479,7 +479,7 @@
                             <p class="card-text">
                                 <?php the_sub_field('text'); ?>
                             </p>
-                            <div class="card-cta"><?php echo esc_html( $cta_btn_title ); ?></div>
+                            <div class="card-cta"><?php echo esc_html( $cta_btn_title); ?></div>
                         </div>
                     </a>
                     <?php endif; ?>

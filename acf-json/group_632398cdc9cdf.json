@@ -779,7 +779,7 @@
                                     "max_height": "",
                                     "max_size": "",
                                     "mime_types": "",
-                                    "preview_size": "medium",
+                                    "preview_size": "thumbnail",
                                     "parent_repeater": "field_6336d1e3b952e"
                                 }
                             ]
@@ -1102,6 +1102,124 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_66033a4b8a4c5": {
+                    "key": "layout_66033a4b8a4c5",
+                    "name": "cards_grid",
+                    "label": "Cards Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66033a4b8a4c6",
+                            "label": "Card",
+                            "name": "card",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Card",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_66033a4b8a4c7",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_66033a4b8a4c6"
+                                },
+                                {
+                                    "key": "field_66033a4b8a4c8",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "rows": 8,
+                                    "placeholder": "",
+                                    "new_lines": "br",
+                                    "parent_repeater": "field_66033a4b8a4c6"
+                                },
+                                {
+                                    "key": "field_66033a4b8a4c9",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "id",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "thumbnail",
+                                    "parent_repeater": "field_66033a4b8a4c6"
+                                },
+                                {
+                                    "key": "field_66033a4b8a4ca",
+                                    "label": "CTA",
+                                    "name": "cta",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "parent_repeater": "field_66033a4b8a4c6"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_65ea0a617a560": {
                     "key": "layout_65ea0a617a560",
                     "name": "ticker",
@@ -1228,5 +1346,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710205112
+    "modified": 1711490688
 }

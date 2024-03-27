@@ -31,6 +31,30 @@ $image_url = wp_get_attachment_image_src($image, $size);
 
 
 <div class="page_content">
+    
+<div class="page_width_small" style="padding: 20px 0;">
+<div class="partner-logos">
+    <?php
+    if( get_field('flexible') ):
+        while ( has_sub_field('flexible') ):
+            ?>
+    <?php
+    if( have_rows('logos') ):
+        while ( have_rows('logos') ) : the_row();
+        ?>
+        
+        <div class="logo"><img src="<?php the_sub_field('logo'); ?>" alt="" /></div>
+        
+        <?php
+    endwhile;
+endif; ?>
+
+<?php
+endwhile;
+endif;
+?>
+</div>
+</div>
 
 	<div class="page_width_small">
 

@@ -488,6 +488,52 @@
             </div>
         </div>
         
+    <?php elseif( get_row_layout() == 'cards_grid' ): ?>
+        <!-- ** Tiles ** -->
+
+        <div class="cards-grid-section">
+            <div class="page_width_small">
+                
+                
+                <div class="cards-grid-main">
+                    
+                    <?php
+                    if( have_rows('card') ):
+                        while ( have_rows('card') ) : the_row();
+                        ?>
+                        
+                        <?php 
+                        $image = get_sub_field('image');
+                        $size = 'large'; // (thumbnail, medium, large, full or custom size)
+                        $image_url = wp_get_attachment_image_src($image, $size);
+                        ?>
+                        
+                        <?php 
+                        $cta_btn = get_sub_field('cta');
+                    
+                        if( $cta_btn ):  
+                            $cta_btn_title = $cta_btn['title'];
+                            $cta_link = $cta_btn['url'];
+                        endif;
+                        
+                         ?>
+                        
+                        <div class="card">
+                            <h3 class="card-title"><?php the_sub_field('title'); ?></h3>
+                            <div class="card-image"><img src="<?php echo $image_url[0]; ?>" /></div>
+                            <div class="card-content">
+                
+                                <p class="card-text">
+                                    <?php the_sub_field('text'); ?>
+                                </p>
+                                <?php if( $cta_btn ): ?><a href="<?php echo esc_url( $cta_link ); ?>" class="card-cta"><?php echo esc_html( $cta_btn_title); ?></a><?php endif; ?>
+                            </div>
+                        </div>
+                        <?php endwhile; endif; ?>
+                    </div>
+                </div>
+            </div>
+        
     <?php elseif( get_row_layout() == 'ticker' ): ?>
         <!-- ** Tiles ** -->
 
